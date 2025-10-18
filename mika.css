@@ -190,7 +190,6 @@ body.show-chatbot .chatbot-popup {
     background: #fff;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: pre-wrap;
 }
 
 .chat-body .bot-message .thingking .message-text {
