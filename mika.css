@@ -215,6 +215,10 @@ body.show-chatbot .chatbot-popup {
     border-bottom: 2px solid #58585A;
 }
 
+.faq-option:last-child {
+    border-bottom: none;
+}
+
 .faq-option:hover {
     background-color: #E0E0E0;
 }
