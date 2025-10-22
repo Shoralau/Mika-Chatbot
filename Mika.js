@@ -110,6 +110,21 @@ messageInput.addEventListener("input", () => {
     document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialInputHeight ? "15px" : "32px";
 })
 
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("faq-option")) {
+    e.preventDefault();
+    
+    const faqOption = e.target.textContent.trim();
+    messageInput.value = faqOption;
+    handleOutgoingMessage(new Event("submit"));
+
+    const sendFaqButton = e.target.closest(".faq");
+    if (sendFaqButton) {
+      sendFaqButton.remove();
+    }
+  }
+});
+
 sendMessageButton.addEventListener("click", (e) => handleOutgoingMessage(e))
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle ("show-chatbot"));
 closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));

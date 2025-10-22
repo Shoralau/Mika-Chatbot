@@ -192,6 +192,33 @@ body.show-chatbot .chatbot-popup {
     overflow-wrap: break-word;
 }
 
+.faq {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 200px; 
+    margin: 10px 0;
+    align-self: flex-end;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.faq-option {
+    border: none;
+    background: white;
+    padding: 20px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 2px solid #58585A;
+}
+
+.faq-option:hover {
+    background-color: #E0E0E0;
+}
+
 .chat-body .bot-message .thingking .message-text {
     padding: 2px 16px;
 }
