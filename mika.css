@@ -375,14 +375,11 @@ body.show-chatbot .chatbot-popup {
 }
 
 @media (max-width: 520px) {
-    .chatbot-toggler {
-        
-    }
     .chatbot-popup {
         display: flex;
         flex-direction: column;
         width: 80vw;
-        max-height: 60vh;
+        max-height: 65vh;
         overflow: hidden;
     }
 
@@ -393,13 +390,13 @@ body.show-chatbot .chatbot-popup {
     }
 
     .faq {
-        width: 100%;
+        width: clamp(30%, 50%, 80%) 100%;
         max-width: 80%;
     }
 
     .faq-option {
         width: 100%;
         font-size: 0.9rem;
-        padding: clamp(10px, 2vh, 14px) 8px;
+        padding: clamp(2px, 1vh, 14px) 8px;
   }
 }
