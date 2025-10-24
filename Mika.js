@@ -75,6 +75,11 @@ const handleOutgoingMessage = (e) => {
     messageInput.value = "";
     messageInput.dispatchEvent(new Event("input"));
 
+    const faqButton = document.querySelector(".faq");
+    if (faqButton) {
+        faqButton.style.display = "none";
+    }
+
     const messageContent = `<div class="message-text"></div>`;
     const outgoingMessageDiv = createMessageElement(messageContent, "user-message");
     outgoingMessageDiv.querySelector(".message-text").textContent = userData.message;
@@ -102,6 +107,7 @@ messageInput.addEventListener("keydown", (e) => {
     if(e.key === "Enter" && userMessage && !e.shiftKey && window.innerWidth > 768) {
         handleOutgoingMessage(e);
     }
+    if (sendFaqButton) sendFaqButton.style.display = 'none';
 });
 
 messageInput.addEventListener("input", () => {

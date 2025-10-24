@@ -17,8 +17,8 @@ body {
     bottom: 30px;
     right: 35px;
     border: none;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,18 +26,27 @@ body {
     border-radius: 50%;
     background: #ED1C24;
     transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+#chatbot-toggler:hover {
+    transform: scale(1.08);
 }
 
 body.show-chatbot #chatbot-toggler {
     transform: rotate(90deg);
 }
 
-#chatbot-toggler span {
+#chatbot-toggler span, img {
     color: #fff;
     position: absolute;
 }
 
-body.show-chatbot #chatbot-toggler span:first-child,
+#chatbot-toggler span {
+    font-size: 32px;
+}
+
+body.show-chatbot #chatbot-toggler img:first-child,
 #chatbot-toggler span:last-child {
     opacity: 0;
 }
@@ -49,7 +58,7 @@ body.show-chatbot #chatbot-toggler span:last-child {
 .chatbot-popup {
     position: fixed;
     right: 35px;
-    bottom: 90px;
+    bottom: 100px;
     width: 420px;
     background: #fff;
     overflow: hidden;
@@ -298,7 +307,7 @@ body.show-chatbot .chatbot-popup {
     bottom: 0;
     width: 100%;
     background: #fff;
-    padding: 15px 22px 20px;
+    padding: 15px 12px 15px;
     border-top: 2px solid #58585A;
 }
 
@@ -306,7 +315,6 @@ body.show-chatbot .chatbot-popup {
     display: flex;
     align-items: center;
     border-radius: 32px;
-    background: #E0E0E0;
 }
 
 .chat-form .message-input {
@@ -339,8 +347,9 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-form .chat-controls button {
-    height: 35px;
-    width: 35px;
+    height: 45px;
+    width: 45px;
+    margin-left: 12px;
     border: none;
     font-size: 1.15rem;
     cursor: pointer;
@@ -348,6 +357,11 @@ body.show-chatbot .chatbot-popup {
     background: #ED1C24;
     border-radius: 50%;
     transition: 0.2s ease;
+}
+
+.chat-form .chat-controls img {
+    right: 24px;
+    bottom: 22px;
 }
 
 .chat-form .chat-controls #send-message {
@@ -360,17 +374,22 @@ body.show-chatbot .chatbot-popup {
     display: block;
 }
 
-.chat-form .chat-controls #send-message:hover {
-    background: #f74d53;
-}
-
-.chat-form .chat-controls button:hover {
-    background: #f74d53;
-}
-
 @media (max-width: 520px) {
     .chatbot-popup {
-        height: 60%;
-        width: 80%;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        max-height: 55vh;
+        overflow: hidden;
+    }
+
+    .scroll-margin {
+        display: flex;
+        overflow-y: auto;
+        flex-direction: column;
+    }
+
+    .faq-option {
+        padding: 18px 18px;
     }
 }
