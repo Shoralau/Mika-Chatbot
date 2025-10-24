@@ -390,8 +390,8 @@ body.show-chatbot .chatbot-popup {
     }
 
     .faq {
-        width: clamp(30%, 50%, 80%) 100%;
-        max-width: 80%;
+        width: 100%;
+        max-width: 70%;
     }
 
     .faq-option {
@@ -399,4 +399,9 @@ body.show-chatbot .chatbot-popup {
         font-size: 0.9rem;
         padding: clamp(2px, 1vh, 14px) 8px;
   }
+
+  .chat-body .bot-message .bot-avatar {
+    height: 40px;
+    width: 40px;
+}
 }
