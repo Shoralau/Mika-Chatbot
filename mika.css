@@ -389,6 +389,7 @@ body.show-chatbot .chatbot-popup {
     }
 
     .chat-body {
+        padding: 0 18px 10px 10px;
         margin-bottom: 76px;
     }
 
