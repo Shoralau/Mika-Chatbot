@@ -4,7 +4,7 @@ const sendMessageButton = document.querySelector("#send-message");
 const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 
-const API_KEY = CONFIG.GEMINI_API_KEY;;
+// const API_KEY = CONFIG.GEMINI_API_KEY;
 const API_URL = `https://mute-scene-0102.cindyvalencia373.workers.dev/`;
 
 const userData = {
